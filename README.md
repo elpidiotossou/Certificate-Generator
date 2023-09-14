@@ -28,7 +28,7 @@ After generating individual certificate images, you can combine them into a sing
 
 1. Generate individual certificate images using the `certificate_generator.ipynb` notebook.
 2. Ensure the generated JPG images are saved in a directory.
-3. Run the `Jpeg_to_PDF.ipynb` notebook to combine the certificates into a PDF:
+3. Run the `Jpeg_to_PDF.ipynb` notebook to combine the certificates into a PDF
 
 ## Requirements
 
