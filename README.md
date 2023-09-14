@@ -37,4 +37,3 @@ The `name_placement_indicator.ipynb` Jupyter Notebook provides an interactive wi
 ```bash
 git clone https://github.com/elpidiotossou/Certificate-Generator.git
 
-Have fun with the Generator
