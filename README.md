@@ -1,6 +1,6 @@
 # Certificate-Generator
 
-This repository contains Jupyter Notebook scripts to assist in certificate generation and identify the placement of names on certificates.
+This repository contains Jupyter Notebook scripts to assist in certificate generation, identify the placement of names on certificates and convert the certificates to pdf.
 
 ## Certificate Generator
 
@@ -22,6 +22,14 @@ The `name_placement_indicator.ipynb` Jupyter Notebook provides an interactive wi
 2. Run the notebook cells to open the interactive widget.
 3. Use sliders to pinpoint name placement coordinates.
 
+## Combining Certificates into a PDF
+
+After generating individual certificate images, you can combine them into a single PDF file using the provided Python script. Follow these steps:
+
+1. Generate individual certificate images using the `certificate_generator.ipynb` notebook.
+2. Ensure the generated JPG images are saved in a directory.
+3. Run the following Python script to combine the certificates into a PDF:
+
 ## Requirements
 
 - Jupyter Notebook
@@ -29,6 +37,7 @@ The `name_placement_indicator.ipynb` Jupyter Notebook provides an interactive wi
 - Pillow (PIL) library
 - Matplotlib
 - ipywidgets
+- fpdf library
 
 ## Getting Started
 
