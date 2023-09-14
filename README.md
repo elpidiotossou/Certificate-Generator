@@ -29,6 +29,33 @@ After generating individual certificate images, you can combine them into a sing
 1. Generate individual certificate images using the `certificate_generator.ipynb` notebook.
 2. Ensure the generated JPG images are saved in a directory.
 3. Run the following Python script to combine the certificates into a PDF:
+```python
+from fpdf import FPDF
+import os
+
+# Directory containing the JPG images
+png_output_dir = 'path_to_directory_containing_JPG_images'
+
+# Output path for the combined PDF
+pdf_output_path = 'path_to_combined_pdf_output.pdf'
+
+# Create a PDF object with landscape A4 dimensions
+pdf = FPDF(orientation='L', unit='mm', format='A4')
+
+# Loop through each JPG image in the directory
+for filename in os.listdir(png_output_dir):
+    if filename.endswith('.jpg'):
+        image_path = os.path.join(png_output_dir, filename)
+        
+        # Add a page to the PDF with landscape A4 dimensions
+        pdf.add_page()
+        
+        # Set the image as the background for the page
+        pdf.image(image_path, x=0, y=0, w=297, h=210)  # Landscape A4 dimensions
+
+# Save the combined PDF
+pdf.output(pdf_output_path)
+print(f"Combined PDF saved as {pdf_output_path}.")
 
 ## Requirements
 
